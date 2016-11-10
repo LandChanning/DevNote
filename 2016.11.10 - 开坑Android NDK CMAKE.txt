@@ -1,3 +1,0 @@
-# 开坑Android NDK CMAKE
-
-> 2016.11.10
