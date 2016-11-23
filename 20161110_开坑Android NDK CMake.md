@@ -18,7 +18,7 @@
 
 **打包时找不到so库**
 
-![文档中链接动态库的语法](src/2016.11.10_1.png)
+![文档中链接动态库的语法](src/20161110_1.png)
 
 上图是文档中关于链接动态库的语法，注意画红圈的地方。
 
@@ -61,7 +61,7 @@ include_directories( import-lib/include/ )
 
 这里需要着重说明一下${CMAKE_SOURCE_DIR}，这个变量也是CMake预设好的，它指向的是最顶层CMakeLists.txt所在的文件夹的路径。
 
-![Demo结构](src/2016.11.10_2.png)
+![Demo结构](src/20161110_2.png)
 
 举例说明：Demo的项目结构如图：CMakeLists.txt只两个，最顶层的在app文件夹下，第二个在app/src/main/cpp文件夹下，所以${CMAKE_SOURCE_DIR}指向的时app这个文件夹的路径，** 无论项目中有几个CMakeList.txt，${CMAKE_SOURCE_DIR}指向的都是最顶层的CMakeList.txt所在的文件夹的路径 ** 。
 
@@ -84,7 +84,7 @@ set_target_properties(lib_gperf PROPERTIES IMPORTED_LOCATION
 
 这一堆俩点时什么鬼？对照工程布局就明白了。
 
-![google NDK sample工程布局](src/2016.11.10_3.png)
+![google NDK sample工程布局](src/20161110_3.png)
 
 脚本所在的CMakeList.txt文件位于hello-libs/app/src/main/cpp文件夹下，而动态库位于hello-libs/distribution/gperf/lib/${ANDROID_ABI}文件夹下。所以俩点和cd命令行中的作用一样：**向上进入父文件夹**。
 
